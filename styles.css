@@ -1,0 +1,100 @@
+
+.slideDown {
+  opacity: 0;
+  animation: slideDown 1.5s ease forwards;
+  -webkit-animation: slideDown 1.5s ease forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+ 
+}
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End in the original position */
+  }
+}
+.slideUp {
+  opacity: 0;
+  animation: slideUp 1.5s ease forwards;
+  -webkit-animation: slideUp 1.5s ease forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    -o-transform: translateY(50px);
+}
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End in the original position */
+  }
+}
+
+
+
+
+.slideRight {
+  opacity: 0;
+  animation: slideRight 1.5s ease forwards;
+  -webkit-animation: slideRight 1.5s ease forwards;
+
+}
+
+
+/* Keyframes for Slide-Up */
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    -o-transform: translateX(-50px);
+}
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End in the original position */
+  }
+}
+.slideLeft {
+  opacity: 0;
+  animation: slideLeft 1.5s ease forwards;
+  -webkit-animation: slideLeft 1.5s ease forwards;
+}
+
+
+/* Keyframes for Slide-Up */
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+    -webkit-transform: translateX(50px);
+    -moz-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    -o-transform: translateX(50px);
+}
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End in the original position */
+  }
+}
+
+/* Styling the placeholder text */
+input::placeholder , .input-text {
+  color: #f1f3f8; 
+  font-style: italic; 
+  font-size: 1rem; 
+}
+
+/* Placeholder style on focus */
+input:focus::placeholder {
+  color: transparent; /* Hide the placeholder when focused */
+}
+
