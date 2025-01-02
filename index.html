@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>True Property</title>
-    <link rel="stylesheet" href="styles.css" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body class="bg-gray-100">
@@ -140,13 +141,13 @@
           <img src="./assets/about-us-image.jpg" alt="" />
         </div>
         <div class="flex flex-col gap-4 text-left w-full md:w-1/2">
-          <span class="text-2xl md:text-3xl text-gray-800 mb-4"
+          <span class="text-2xl md:text-3xl text-gray-800 mb-4 fade-in" style="transition-delay: 0.2s";
             >Who We Are !</span
           >
-          <span class="text-3xl md:text-5xl text-black font-bold slide-in-left"
+          <span class="text-3xl md:text-5xl text-black font-bold fade-in" style="transition-delay: 0.5s"
             >Best and Award Winning Real Estate Business in UK</span
           >
-          <span class="text-neutral-800 text-lg italic"
+          <span class="text-neutral-800 text-lg italic fade-in " style="transition-delay: 0.8s"
             >We are a leading property developer with expertise in property
             management, construction, and labor management. Our team is
             dedicated to delivering exceptional results tailored to your
@@ -375,10 +376,28 @@
         </div>
       </div>
 
-      <div class="text-center mt-10 text-gray-500 text-sm">
+      <div class="text-center mt-10 text-gray-500 text-sm fade-in">
         © 2024 TrueProperty. All rights reserved.
       </div>
     </footer>
+
+
+<!-- Enable animation when it is visible -->
+
+    <script>
+      // IntersectionObserver to trigger animation
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      });
+  
+      // Select all elements to animate
+      const elements = document.querySelectorAll('.fade-in');
+      elements.forEach((el) => observer.observe(el));
+    </script>
 
 
 

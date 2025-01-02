@@ -98,3 +98,15 @@ input:focus::placeholder {
   color: transparent; /* Hide the placeholder when focused */
 }
 
+
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
